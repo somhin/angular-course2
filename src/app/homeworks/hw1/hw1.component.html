@@ -1,0 +1,36 @@
+<section>
+  <div id="container">
+    <form [formGroup]="form">
+      <div class="row">Name <span>*</span></div>
+      <mat-form-field appearance="standard">
+        <mat-label>required</mat-label>
+        <input matInput placeholder="Your answer" formControlName="name" />
+      </mat-form-field>
+
+      <div class="row">Email <span>*</span></div>
+      <mat-form-field appearance="standard">
+        <mat-label>required</mat-label>
+        <input
+          matInput="email"
+          placeholder="Your answer"
+          formControlName="email"
+        />
+      </mat-form-field>
+
+      <div class="row">Postal Address <span>*</span></div>
+      <mat-form-field appearance="standard">
+        <mat-label>required</mat-label>
+        <input matInput placeholder="Your answer" formControlName="address" />
+      </mat-form-field>
+
+      <div class="row">Comments</div>
+      <mat-form-field appearance="standard">
+        <mat-label>Your answer</mat-label>
+        <input matInput placeholder="Your answer" formControlName="comment" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="submitForm()">
+        SUBMIT
+      </button>
+    </form>
+  </div>
+</section>

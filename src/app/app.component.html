@@ -1,5 +1,7 @@
-<h1>lab 3&4</h1>
-<app-posts></app-posts>
-
-<h1>lab 1&2</h1>
-<app-myform></app-myform>
+<mat-toolbar color="primary">
+  <a [routerLink]="['/']" routerLinkActive="active">LAB 1&2</a>
+  <a [routerLink]="['/ajax']">LAB 3&4</a>
+  <a [routerLink]="['/hw1']">Homework 1</a>
+  <a [routerLink]="['/hw2']">Homework 2</a>
+</mat-toolbar>
+<router-outlet></router-outlet>
