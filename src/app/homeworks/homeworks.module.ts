@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,6 +18,7 @@ import { Hw2Component } from '../homeworks/hw2/hw2.component';
     ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,
+    HttpClientModule,
   ],
   exports: [Hw1Component, Hw2Component],
 })

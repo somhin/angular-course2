@@ -1,0 +1,19 @@
+section {
+  width: 100%;
+  #container {
+    display: flex;
+    gap: 20px;
+    padding-top: 100px;
+    margin: auto;
+    width: 30%;
+  }
+}
+
+.row {
+  font-size: 1.2rem;
+}
+
+.row2 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}

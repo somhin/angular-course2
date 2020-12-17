@@ -1,5 +1,27 @@
 <section>
   <div id="container">
-    <form></form>
+    <form [formGroup]="form">
+      <div class="row">Input</div>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Your answer" formControlName="input1" />
+      </mat-form-field>
+
+      <div class="row">Output</div>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Your answer" formControlName="input2" />
+      </mat-form-field>
+    </form>
+    <form [formGroup]="form">
+      <div class="row2">Input Currency</div>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Your answer" formControlName="input1" />
+      </mat-form-field>
+
+      <div class="row2">Output Currency</div>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Your answer" formControlName="input2" />
+      </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="convert()">Convert</button>
   </div>
 </section>
