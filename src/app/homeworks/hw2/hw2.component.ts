@@ -8,19 +8,33 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./hw2.component.scss'],
 })
 export class Hw2Component implements OnInit {
-  exRates: any;
   form: FormGroup;
-
-  constructor(private fb: FormBuilder, private httpClient: HttpClient) {
+  convertMoney = 0;
+  constructor(private httpClient: HttpClient, private fb: FormBuilder) {
     this.form = this.fb.group({
-      input1: '',
-      input2: '',
-      currency1: ['', Validators.required],
-      currency2: ['', Validators.required],
+      base: ['', Validators.required],
+      currency: ['', Validators.required],
+      moneyBase: ['', Validators.required],
     });
   }
 
   ngOnInit(): void {}
+  getFromBase() {
+    const base = this.form.get('base').value.toUpperCase();
+    const currency = this.form.get('currency').value.toUpperCase();
+    const moneyBase = this.form.get('moneyBase').value;
 
-  convert() {}
+    console.log(base);
+    console.log(moneyBase);
+    console.log(currency);
+
+    this.httpClient
+      .get('https://api.exchangeratesapi.io/latest', {
+        params: { base, currency },
+      })
+      .subscribe((result) => {
+        console.log(result['rates'][currency] * moneyBase);
+        this.convertMoney = result['rates'][currency] * moneyBase;
+      });
+  }
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PostsComponent } from './ajax/posts/posts.component';
 import { MyformComponent } from './forms/myform/myform.component';

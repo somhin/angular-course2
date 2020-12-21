@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "twutty-f56bc": {
+      "hosting": {
+        "angular-course2": [
+          "twutty-f56bc"
+        ]
+      }
+    }
+  }
+}
